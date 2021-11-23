@@ -1,4 +1,6 @@
 import './App.css';
+import logo from './International_Pokémon_logo.png';
+import ResultControler from './ResultControler';
 import React, { useState } from 'react';
 
 function App() {
@@ -19,7 +21,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="title">Pokedex</h1>
+      <img className="logo" src={logo} alt='Pokedex' />
       <div className="search-box">
         <input
           className="search-bar"
@@ -30,19 +32,7 @@ function App() {
           onKeyPress={search}
         />
       </div>
-      <div className="result">
-        <div className="poke-id">ID: {pokemon.id}</div>
-        <div className="poke-name">{pokemon.name}</div>
-        <img className="poke-img" src={pokemon.sprites.front_default} alt='' />
-        <div className="poke-type">{pokemon.types[0].type.name}</div>
-        <br/>
-        <div className="poke-move">
-          Moves: 
-          <ul>
-            {/* <li>{pokemon.move[0].move.name}</li> */}
-          </ul>
-        </div>
-      </div>
+      <ResultControler pokemon={pokemon}/>
     </div>
   );
 }

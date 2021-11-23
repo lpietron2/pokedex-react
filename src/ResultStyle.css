@@ -1,0 +1,19 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.result{
+    background-color: white;
+    min-width: 400px;
+
+    padding: 10px;
+    font-weight: 600;
+}
+
+.poke-img{
+    display: block;
+    margin: -40px 0 -25px auto;
+    right: 0px;
+}
