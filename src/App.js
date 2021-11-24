@@ -6,6 +6,7 @@ import React, { useState } from 'react';
 function App() {
   const [pokemon, setPokemon] = useState({});
   const [query, setQuery] = useState('');
+  const [isShiny, setIsShiny] = useState(false);
 
   const search = (evt) => {
     if(evt.key === "Enter"){
@@ -14,6 +15,7 @@ function App() {
         .then((result) => {
           setPokemon(result);
           setQuery('');
+          //setIsShiny(false);
           console.log(result);
         })
     }
@@ -32,7 +34,7 @@ function App() {
           onKeyPress={search}
         />
       </div>
-      <ResultControler pokemon={pokemon}/>
+      <ResultControler pokemon={pokemon} isShiny={isShiny} setIsShiny={setIsShiny}/>
     </div>
   );
 }

@@ -10,10 +10,12 @@
 
     padding: 10px;
     font-weight: 600;
+    display: flex;
 }
 
-.poke-img{
-    display: block;
-    margin: -40px 0 -25px auto;
-    right: 0px;
+.img-box{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: 0;
 }
