@@ -29,3 +29,9 @@
   padding-left: 15px;
   margin-bottom: 25px;
 }
+
+.date-box{
+  /* position: relative; */
+  margin: auto 0 0 auto;
+  padding: 0 10px 10px 0;
+}
