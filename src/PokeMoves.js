@@ -1,19 +1,11 @@
 import React, { useState } from 'react';
 
-function PokeMoves({pokemon}){
-    const [moveLength, setMoveLength] = useState(0);
+function PokeMoves({pokemon, id}){
 
-    const MoveHandler = () => {
-        if(pokemon.moves === undefined){
-            return;  
-        }else{
-            setMoveLength(pokemon.moves.length);
-        }
-    }
     return(
-        <div>
-            Moves: {MoveHandler()}
-        </div>
+        <li>
+            {pokemon.moves[id].move.name}
+        </li>
     );
 }
 

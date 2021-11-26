@@ -19,3 +19,11 @@
     margin-left: auto;
     margin-right: 0;
 }
+
+.poke-moves{
+    background-color: white;
+    min-width: 400px;
+
+    padding: 10px;
+    font-weight: 600;
+}

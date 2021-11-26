@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import PokeMoves from './PokeMoves';
 import './ResultStyle.css';
 
-
+ 
 function ResultControler({pokemon, isShiny, setIsShiny}){
+    
     
     const toggleShiny = () => {
         (!isShiny) ? setIsShiny(true) : setIsShiny(false);
@@ -15,6 +16,16 @@ function ResultControler({pokemon, isShiny, setIsShiny}){
             <div></div>
         );
     }
+    
+
+    const MoveList = () => {
+        var list = [];
+        for(var i=0; i < 4; i++){
+            list.push(<PokeMoves pokemon={pokemon} id={i}/>)
+        }
+        return list;
+    }
+
     return(
         <div>
             <div className="result">
@@ -44,7 +55,9 @@ function ResultControler({pokemon, isShiny, setIsShiny}){
                 </div>
             </div>
             <div className="poke-moves">
-                <PokeMoves pokemon={pokemon} />
+                <br/>
+                Moves:
+                {MoveList()}
             </div>
         </div>
     );

@@ -8,6 +8,7 @@ function App() {
   const [query, setQuery] = useState('');
   const [isShiny, setIsShiny] = useState(false);
 
+
   const search = (evt) => {
     if(evt.key === "Enter"){
       fetch(`https://pokeapi.co/api/v2/pokemon/${query}`)
@@ -18,7 +19,7 @@ function App() {
           //setIsShiny(false);
           console.log(result);
         })
-    }
+     }
   }
 
   const dateBuider = (d) =>{
