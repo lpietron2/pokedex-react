@@ -54,6 +54,7 @@ function App() {
         />
       </div>
       <ResultControler pokemon={pokemon} isShiny={isShiny} setIsShiny={setIsShiny}/>
+
       <div className="date-box">{dateBuider(new Date())}</div>
     </div>
   );
